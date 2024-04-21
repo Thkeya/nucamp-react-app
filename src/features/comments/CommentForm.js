@@ -46,14 +46,14 @@ const CommentForm = ({ campsiteId }) => {
                                     <option>5</option>
                                 </Field>
                                 <ErrorMessage name='rating'>
-                                    {msg => <div className="text-danger">{msg}</div>}
+                                {(msg) => <p className='text-danger'>{msg}</p>}
                                 </ErrorMessage>
                             </FormGroup>
                             <FormGroup>
                                 <Label htmlFor='author'>Your Name</Label>
                                 <Field name='author' placeholder='Your Name' className='form-control' />
                                 <ErrorMessage name='author'>
-                                    {msg => <div className="text-danger">{msg}</div>}
+                                {(msg) => <p className='text-danger'>{msg}</p>}
                                 </ErrorMessage>
                             </FormGroup>
                             <FormGroup>
