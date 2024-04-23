@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { Container, Row } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import { selectedCampsiteById } from '../features/campsites/campsitesSlice';
@@ -7,7 +8,8 @@ import SubHeader from '../components/SubHeader';
 
 const CampsiteDetailPage = () => {
     const { campsiteId } = useParams();
-    const campsite = selectedCampsiteById(campsiteId);
+    const campsite = useSelector(selectedCampsiteById(campsiteId));
+    console.log('campsite:', campsite);
 
     return (
         <Container>
