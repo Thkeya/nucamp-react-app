@@ -33,6 +33,6 @@ const CommentsList = ({ campsiteId }) => {
         </Col>
     );
     
-}
+};
 
 export default CommentsList;
